@@ -31,7 +31,7 @@ async def analyze(request: AnalyzeRequest):
             detail="Both the document and the target context are required."
         )
     
-    if request.mode not in ["job", "college", "scholarship"]:
+    if request.mode not in ["job", "college", "scholarship", "interview"]:
         raise HTTPException(
             status_code=400, 
             detail="Invalid mode selected."
